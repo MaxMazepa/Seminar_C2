@@ -3,11 +3,16 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int numb = new Random().Next(1, 10000);
-Console.WriteLine($"Начальное число --> {numb}");
+int Numb = new Random().Next(1, 100000);
+Console.WriteLine($"Начальное число --> {Numb}");
+int LastDig = 0;
 
-while (res <= 100)
-{
-    int res = numb / 100;
-}
-System.Console.WriteLine(res);
+while (Numb > 1000)
+    Numb = Numb / 10;
+
+if (Numb < 100)
+    Console.WriteLine($"У числа {Numb} нет третьй цифры");
+else
+    Console.WriteLine($"Последняя цифра --> {LastDig = Numb % 10}");
+
+
